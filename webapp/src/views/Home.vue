@@ -75,7 +75,8 @@
 import MovieVue from '../components/MovieVue.vue'
 import axios from 'axios'
 
-const localServerUrl = 'http://127.0.0.1:8081'
+const localPort = 8081
+const localServerUrl = `http://127.0.0.1:${localPort}`
 
 export default {
   name: 'home',
@@ -116,7 +117,7 @@ export default {
       this.items = [
         {
           title: 'Error communicating with the server.',
-          popularity_summary: "Please check that it's running locally on port 8080."
+          popularity_summary: `Please check that it's running locally on port ${localPort}.`
         }
       ]
       this.searching = false
