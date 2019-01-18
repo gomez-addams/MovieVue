@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="gomezaddams.gomezaddams.main" target="11" />
+      <module name="gomezaddams.gomezaddams.test" target="11" />
+      <module name="webserver.gomezaddams.gomezaddams.main" target="11" />
+      <module name="webserver.gomezaddams.gomezaddams.test" target="11" />
+      <module name="webserver.gomezaddams.main" target="11" />
+      <module name="webserver.gomezaddams.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
