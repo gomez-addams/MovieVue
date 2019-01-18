@@ -61,7 +61,8 @@
           type='error'
           color='red lighten-2'
         >
-        Received response: {{ hadError }}
+        <h2 class='text-sm-left'>Is the webserver process running?</h2>
+        <p class='text-sm-left'><b>Received response:</b>  {{ hadError }}</p>
         </v-alert>
       </v-flex>
     </v-layout>

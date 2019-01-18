@@ -1,5 +1,6 @@
 @echo off
 set SCRIPTDIR=%~dp0
+rem cd %SCRIPTDIR%
 
-call %SCRIPTDIR%\webserver\start_webserver.bat
-call %SCRIPTDIR%\webapp\start_webapp.bat
+start call "%SCRIPTDIR%"\webserver\start_webserver.bat
+call "%SCRIPTDIR%"\webapp\start_webapp.bat
