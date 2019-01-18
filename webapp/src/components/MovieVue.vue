@@ -1,9 +1,7 @@
 <template>
-  <v-content>
-    <div class="movievue">
-      <h1>{{ msg }}</h1>
-    </div>
-  </v-content>
+  <div class="movievue">
+    <h1>{{ msg }}</h1>
+  </div>
 </template>
 
 <script>

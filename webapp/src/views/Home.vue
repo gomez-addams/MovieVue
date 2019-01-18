@@ -61,19 +61,21 @@
           type='error'
           color='red lighten-2'
         >
-        Received response: {{ hadError }}
+        <h2 class='text-sm-left'>Is the webserver process running?</h2>
+        <p class='text-sm-left'><b>Received response:</b>  {{ hadError }}</p>
         </v-alert>
       </v-flex>
     </v-layout>
 
-    <MovieVue msg='<nuffin>' />
+    <MovieVue msg='' /> <!-- not really making use of this component now except for a unit test -->
   </v-content>
 </template>
 
 <script>
-// @ is an alias to /src
-import MovieVue from '@/components/MovieVue.vue'
+import MovieVue from '../components/MovieVue.vue'
 import axios from 'axios'
+
+const localServerUrl = 'http://127.0.0.1:8081'
 
 export default {
   name: 'home',
@@ -85,18 +87,18 @@ export default {
   methods: {
     doSearch () {
       let term = this.searchTerm
-      console.log(`here I am ${term}`)
+      this.doLog(`here I am ${term}`)
       this.hadError = false
       if (term && /^\s*$/.test(term) === false) { // non-empty string?
         this.searching = true
         try {
-          let pending = axios.get(`http://127.0.0.1:8080/movies?search=${term}`)
-          console.log(`axios pending ${pending}`)
+          let pending = axios.get(`${localServerUrl}/movies?search=${term}`)
+          this.doLog(`axios pending ${pending}`)
           pending.then(response => {
-            console.log(`got response ${JSON.stringify(response)}`)
+            this.doLog(`got response ${JSON.stringify(response)}`)
             this.items = response.data
             this.searching = false
-            console.log(`set items ${JSON.stringify(this.items)}`)
+            this.doLog(`set items ${JSON.stringify(this.items)}`)
             // alert(`got content ${JSON.stringify(this.items)}`)
           }, err => {
             this.setError(err)
@@ -110,7 +112,7 @@ export default {
     },
 
     setError (err) {
-      console.log(`setting error ${err}`)
+      this.doLog(`setting error ${err}`)
       this.items = [
         {
           title: 'Error communicating with the server.',
@@ -119,7 +121,21 @@ export default {
       ]
       this.searching = false
       this.hadError = err
-      console.error(err)
+      this.doLog(err, true)
+    },
+
+    doLog (msg, error) {
+      try {
+        if (error) {
+          // eslint-disable-next-line
+          console.error(msg)
+        } else {
+          // eslint-disable-next-line
+          console.log(msg)
+        }
+      } catch (ignore) {
+        // no console support?
+      }
     }
   },
 
