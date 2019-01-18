@@ -1,8 +1,15 @@
 <template>
-  <div class="about">
-    <h1>About this webapp</h1>
-    <p>This app is part of a programming challenge using Kotlin for a backend and vue.js for a frontend
-    to access tmdb.org and search for movies based on titles.</p>
-    <p>Be sure you've started the local webserver before using this webapp.</p>
-  </div>
+  <v-content>
+    <v-layout row>
+      <div class="about">
+        <h1>About this webapp</h1>
+        <v-flex ma-5>
+          <p>This app is part of a programming challenge using Kotlin for the backend server and vue.js for the frontend
+          client. It accesses tmdb.org via the local server to search for movies at tmdb.org</p>
+          <br>
+          <p>Be sure you've started the local webserver before using this webapp.</p>
+        </v-flex>
+      </div>
+    </v-layout>
+  </v-content>
 </template>
