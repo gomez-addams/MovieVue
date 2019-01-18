@@ -1,11 +1,13 @@
 #Code Challenge
 
-I decided to develop this project on Windows 10 64-bit instead of using Mac or Linux. I actually prefer the bash shell and the Unix environment over the Windows command line, but it's servicable.
+I decided to develop this project on Windows 10 64-bit instead of using Mac or Linux. I actually prefer the bash shell and the Unix environment over the Windows command line, but it's servicable enough.
 
 I have included Windows batch scripts to automatically run the webserver and webapp deliverables. The webserver requires that you have Java installed with the appropriate PATH entries at the system level. Some additional requirements will be checked for and installed if necessary. Avoid using these scripts if you prefer to avoid installation side effects and manually run things.
 
 To test the project, run the following script from this directory:
 * start_evaluation.bat
+
+Note: I've been developing and testing with Chrome as my default browser, but having switched to a system where Edge was the default it didn't appear to run correctly. Please manually open the test page in Chrome in that case. #apologies
 
 The webapp is pre-built for convenience, but the webserver may auto-install Kotlin and other requirements before building and running. There is no pre-built binary supplied for the webserver.
 
