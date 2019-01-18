@@ -1,6 +1,16 @@
 #Code Challenge
 
-This challenge was interesting because it introduced me to both Vue.js and Kotlin with the IntelliJ IDE. I decided to develop these projects on Windows 10 64-bit instead of using Mac or Linux. I actually prefer the bash shell and the Unix environment over Windows command or power shells, but it's servicable.
+I have included Windows batch scripts to automatically run the webserver and webapp deliverables. These require that you have both NPM and Java installed with the appropriate PATH entries at the system level. Some additional requirements will be checked for and installed if necessary. Avoid using these scripts and manually execute the deliverables if you prefer to avoid installation side effects.
+
+Run start_evaluation.bat from the root directory of this project.
+
+This challenge was interesting to me because it gave me a chance to use both Vue.js and Kotlin with the IntelliJ IDE. I decided to develop these projects on Windows 10 64-bit instead of using Mac or Linux. I actually prefer the bash shell and the Unix environment over the Windows command line, but it's servicable.
+
+My most recent work involved the following development environments and languages, in this order:
+* Windows Visual Studio and UWP/Win32 with C++/C#
+* Unity 3D on Windows, Mac OS X, iOS and Android with C#
+* Microsoft Azure functions and data services with C#
+* Mac OS X and Xcode with C++/Objective-C/Swift
 
 #Front-End: webapp
 
