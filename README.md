@@ -15,12 +15,14 @@ This challenge was interesting to me because it was a chance to use both Vue.js 
 * Microsoft Azure functions and data services with C#
 * Mac OS X and Xcode with C++/Objective-C/Swift
 
+
 #Front-End: webapp
 
 The web app has been built with Visual Studio Code and NPM using Vue cli version 3 and a fairly standard configuration. I stuck with vanilla JavaScript (ignoring the lure of TypeScript). I added the following plugins to the Vue project:
 * Axios: for easy async communication with the tmdb.org server
 * Jest: for unit testing (with a single test case)
 * Vuetify: for easy UI creation (then ignored most of it so I could keep this thing simple)
+
 
 #Back-End: webserver
 
