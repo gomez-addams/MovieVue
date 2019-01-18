@@ -1,10 +1,23 @@
-webapp:
+#Code Challenge
 
-This implementation has been built using the Vue cli version 3 with a fairly standard configuration and vanilla JavaScript (ignoring the lure of TypeScript).
+This challenge was interesting because it introduced me to both Vue.js and Kotlin with the IntelliJ IDE. I decided to develop these projects on Windows 10 64-bit instead of using Mac or Linux. I actually prefer the bash shell and the Unix environment over Windows command or power shells, but it's servicable.
 
+#Front-End: webapp
 
-webserver:
+The web app has been built with Visual Studio Code and NPM using Vue cli version 3 and a fairly standard configuration. I stuck with vanilla JavaScript (ignoring the lure of TypeScript). I added the following plugins to the Vue project:
 
-This implementation has been built with the IntelliJ IDE on Windows 10 64-bit.
+* Axios: for easy async communication with the tmdb.org server
+* Jest: for unit testing (with a single test case)
+* Vuetify: for easy UI creation (then ignored most of it so I could keep this thing simple)
 
-The unit tests are fairly minimal. I'm not sure how to mock tests for something like this that depends on an external service api. There must be assertion primitives that operator on JSON data, or does that need to be written?
+Run the front end
+
+#Back-End: webserver
+
+The web server has been built with the IntelliJ IDE and gradle. I added the following to the IntelliJ project:
+
+* Gson: for JSON support (the native support seems a bit weak)
+* Ktor: for easy basic server support
+* JUnit: for testing (the unit tests are pretty unsophisticated but there are several of them)
+
+Run the back end
