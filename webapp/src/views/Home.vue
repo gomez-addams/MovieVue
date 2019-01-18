@@ -16,8 +16,9 @@
                   placeholder='Enter the movie title search term'
                   outline
                   solo
-                  v-model="searchTerm"
-                  v-on:keyup.enter="doSearch"
+                  clearable
+                  v-model='searchTerm'
+                  v-on:keyup.enter='doSearch'
                 />
               </v-flex>
               <v-flex shrink pl-2 pt-3>

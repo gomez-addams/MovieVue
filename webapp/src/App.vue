@@ -3,7 +3,7 @@
     <v-app id="app">
       <div id="nav">
         <!-- <v-footer class="pa-3" color="teal lighten-5"> <v-flex text-xs-center> -->
-          <router-link to="/">Movie Search</router-link> |
+          <router-link to="/">Simple Movie Search</router-link> |
           <router-link to="/about">About</router-link>
         <!-- </v-flex> </v-footer> -->
       </div>
