@@ -7,7 +7,7 @@ I have included Windows batch scripts to automatically run the webserver and web
 To test the project, run the following script from this directory:
 * start_evaluation.bat
 
-Note: I've been developing and testing with Chrome as my default browser, but having switched to a system where Edge was the default it didn't appear to run correctly. Please manually open the test page in Chrome in that case. #apologies
+Note: I've been developing and testing with Chrome as my default browser, but having switched to a system where Edge was the default it didn't appear to run correctly. Please manually open the test page in Chrome in that case. #apologies I suspect this may be the Cross Origin Site Scripting problem you mentioned in the challenge document, but I never ran into it during development. #typicaldevbug
 
 The webapp is pre-built for convenience, but the webserver may auto-install Kotlin and other requirements before building and running. There is no pre-built binary supplied for the webserver.
 
