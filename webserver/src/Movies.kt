@@ -77,7 +77,6 @@ class Movies (private val callState: ApplicationCall) {
                 val posterImageUrl = makePosterImageUrl(posterPath, width)
                 val popularity = result["popularity"]?.asNumberOrNull() ?: 0.0
                 val voteCount = result["vote_count"]?.asNumberOrNull() ?: 0
-                //val voteAverage = result["vote_average"]?.asNumberOrNull() ?: 0.0
                 val popularitySummary = """Popularity $popularity out of $voteCount votes"""
 
                 // We pack the desired info into our own data class.
@@ -104,15 +103,5 @@ private fun JsonElement.asNumberOrNull() : Number? =
 private fun JsonElement.asStringOrNull() : String? =
     this.asPrimOrNull(JsonPrimitive::isString, JsonPrimitive::getAsString)
 
-// I like this function for wrapping calls that may throw exceptions, but it's pointless in this file.
-private fun <T> successOrNull(block: () -> T) : T? {
-    return try {
-        block()
-    } catch (exc: Exception) {
-        null
-    }
-}
-
-// How does the Math library not have a clamp function?? I'm a Kotlin noob.
 private fun clamp(min: Int, max: Int, value: Int) : Int =
     Math.max(min, Math.min(max, value)) // no Math.clamp already??

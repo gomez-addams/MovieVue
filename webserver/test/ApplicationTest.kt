@@ -12,11 +12,9 @@ import io.ktor.sessions.*
 import io.ktor.features.*
 import org.slf4j.event.*
 import io.ktor.gson.*
-import com.fasterxml.jackson.databind.*
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import io.ktor.jackson.*
 import kotlin.test.*
 import io.ktor.server.testing.*
 

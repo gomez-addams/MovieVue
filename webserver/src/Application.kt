@@ -24,18 +24,12 @@ import io.ktor.response.*
 import io.ktor.request.*
 import io.ktor.routing.*
 import io.ktor.http.*
-import io.ktor.content.*
 import io.ktor.http.content.*
 import io.ktor.locations.*
 import io.ktor.sessions.*
 import io.ktor.features.*
 import org.slf4j.event.*
 import io.ktor.gson.*
-import com.fasterxml.jackson.databind.*
-import io.ktor.jackson.*
-import com.gomezaddams.*
-import kotlinx.coroutines.launch
-import org.json.simple.JSONValue
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -80,10 +74,6 @@ fun Application.module(testing: Boolean = false) {
     install(ContentNegotiation) {
         gson {
         }
-
-        jackson {
-            enable(SerializationFeature.INDENT_OUTPUT)
-        }
     }
 
     routing {
@@ -119,10 +109,6 @@ fun Application.module(testing: Boolean = false) {
 
         get("/json/gson") {
             call.respond(mapOf("hello" to "world"))
-        }
-
-        get("/json/jackson") {
-            call.respond(arrayOf("hello", "world"))
         }
     }
 }
